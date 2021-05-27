@@ -4,9 +4,12 @@ from actions import *
 
 selected_word = select_word()
 
-a =fill_result_word(selected_word)
+list1 = ['-']*len(selected_word)
 
-print(join_alphabet(a))
-inp = input("PL")
-out = find_alphabet(a, inp, selected_word)
-print(out)
+
+faild_counter = 0
+
+while faild_counter<7:
+    guessed_alphabet = input("Please enter your alphabet: ")
+    w = find_alphabet(list1, guessed_alphabet, selected_word)
+    v = join_alphabet(w)
