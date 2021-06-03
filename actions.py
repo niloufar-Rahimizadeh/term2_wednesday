@@ -6,11 +6,6 @@ def select_word():
     return words[index]
 
 
-def fill_result_word(word):
-    global result_word
-    for x in word:
-        result_word.append("-")
-    return result_word
 
 def find_alphabet(list1, alphabet, word):
     for i in range(0, len(list1)):
